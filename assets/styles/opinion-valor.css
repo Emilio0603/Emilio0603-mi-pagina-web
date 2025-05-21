@@ -1,0 +1,71 @@
+.opiniones-section {
+  background: #000;
+  color: white;
+  padding: 40px 20px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.opinion-box, .valor-box {
+  border: 4px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  flex: 1;
+  background-color: #111;
+}
+
+.opinion-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.opinion-box .contenido {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.valor-box svg {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 10px auto;
+}
+
+.valor-circulo .fondo {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+}
+
+.valor-circulo .progreso {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1s, stroke 0.5s;
+}
+
+.valor-texto {
+  font-size: 1.5em;
+  fill: white;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

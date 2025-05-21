@@ -1,0 +1,130 @@
+/* Estilos específicos para la página SDG */
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 500px;
+  }
+  
+  .descripcion-sdg {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .descripcion-sdg h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .descripcion-sdg p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .sdg-grid {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .sdg-grid h3 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+  }
+  
+  .sdg-grid .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .sdg-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .sdg-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  
+  .sdg-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .sdg-card span {
+    font-size: 0.95em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+.tarjetas-informativas {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  gap: 30px; /* espacio entre tarjetas, tanto horizontal como vertical */
+  margin-top: 20px;
+  margin-bottom: 40px; /* espacio extra abajo */
+}
+
+.tarjeta-sdg {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-sdg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta-sdg img {
+  max-width: 100px;
+  margin-bottom: 15px;
+}
+
+.tarjeta-sdg h3 {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.tarjeta-sdg p {
+  font-size: 0.95em;
+  color: #666;
+}
+  
+  /* Animación de aparición */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

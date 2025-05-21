@@ -1,0 +1,359 @@
+.hero-text {
+  position: relative;
+  text-align: center;
+}
+
+.hero-text img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+/* Sección retrato */
+.retrato-info .contenedor {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.retrato {
+  position: relative;
+  max-width: 400px;
+}
+
+.retrato img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nombre {
+  background-color: white;
+  padding: 5px 10px;
+  position: absolute;
+  left: 170px;
+  top: 50px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+}
+
+.descripcion {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.subtitulo {
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.subtitulo span {
+  font-style: italic;
+}
+
+.dificultades {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Círculo desplegable */
+.exp-circle {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.exp-circle button {
+  font-size: 30px;
+  border: none;
+  background: #222;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+#exp-info {
+  margin-top: 15px;
+  display: none;
+}
+
+/* Imagen + texto sombra */
+.perfil-cientifica {
+  background-color: #fffbfb;
+  padding: 40px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-cientifica .contenido {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.perfil-cientifica img {
+  width: 1200px;
+  border-radius: 10px;
+}
+
+.perfil-cientifica .texto {
+  max-width: 500px;
+}
+
+/* Sección blanca */
+.seccion-blanca {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 1em;
+}
+
+/* Animación */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tarjetas redondas */
+.grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px auto;
+}
+
+.card {
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 240px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.img-placeholder {
+  background: #105c78;
+  color: white;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin: 0 auto 10px;
+}
+
+.expand-btn {
+  background: #105c78;
+  border: none;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.contenido-extra {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  margin-top: 10px;
+}
+
+.card.expandida .contenido-extra {
+  max-height: 150px;
+  opacity: 1;
+}
+
+/*HOLDER IMAGEN*/
+.img-placeholder-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+
+/* HISTORIA + DIFICULTADES */
+.historia-section {
+  margin-top: 60px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.historia-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.historia-header .circle-img {
+  background: #105c78;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.nombre-banner {
+  background: #105c78;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 0 10px 10px 0;
+  font-size: 1.1em;
+}
+
+.historia-header .cita {
+  margin-top: 5px;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.historia-textos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 40px;
+}
+
+.historia-textos div {
+  width: 50%;
+}
+
+.historia-textos h3 {
+  border-bottom: 2px solid #333;
+  margin-bottom: 10px;
+}
+
+/* Sección final con fondo negro */
+.seccion-blanca-final {
+  background-color: #000;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.seccion-blanca-final h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Reutilizamos estilos ya existentes para opiniones-section */
+.opiniones-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.opinion-box, .valor-box {
+  border: 4px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  flex: 1;
+  background-color: #111;
+}
+
+.opinion-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.opinion-box .contenido {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Valor Personal - Círculo animado */
+.valor-box svg {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 10px auto;
+}
+
+.valor-circulo .fondo {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+}
+
+.valor-circulo .progreso {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1s, stroke 0.5s;
+}
+
+.valor-texto {
+  font-size: 1.5em;
+  fill: white;
+}
+
+.seccion-lila {
+  background-color: #d9b3ff; /* Lila suave */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.texto-cursiva {
+  font-style: italic;
+  font-size: 1.3em;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}

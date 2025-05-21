@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de Pruebas</title>
+  <link rel="stylesheet" href="assets/styles/pruebas.css">
+</head>
+<body>
+  <header class="pruebas-header">
+    <h1>Diseños de prueba</h1>
+  </header>
+
+  <main>
+    <!-- Caja simple -->
+    <section class="prueba-box reveal">
+      <h2>Animación de aparición</h2>
+      <p>Este bloque aparecerá con animación cuando hagas scroll hacia él.</p>
+    </section>
+
+    <!-- Cuadro transformable -->
+    <section class="prueba-box reveal">
+      <h2>Prueba de transformación</h2>
+      <div class="cuadro-transformable"></div>
+    </section>
+
+    <!-- Tarjetas con botón Ver más -->
+    <section class="tarjetas-grid reveal">
+      <div class="tarjeta-expandible">
+        <div class="imagen-placeholder">IMG</div>
+        <h3>Título 1</h3>
+        <p class="descripcion">Texto introductorio breve debajo de la imagen.</p>
+        <button class="toggle-btn" onclick="toggleExpand(this)">Ver más</button>
+        <div class="contenido-expandido">
+          <p>Información adicional que se muestra al expandir esta tarjeta.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-expandible">
+        <div class="imagen-placeholder">IMG</div>
+        <h3>Título 2</h3>
+        <p class="descripcion">Otro texto breve como resumen.</p>
+        <button class="toggle-btn" onclick="toggleExpand(this)">Ver más</button>
+        <div class="contenido-expandido">
+          <p>Contenido extra para esta segunda tarjeta.</p>
+        </div>
+      </div>
+
+      <div class="tarjeta-expandible">
+        <div class="imagen-placeholder">IMG</div>
+        <h3>Título 3</h3>
+        <p class="descripcion">Pequeña descripción adicional.</p>
+        <button class="toggle-btn" onclick="toggleExpand(this)">Ver más</button>
+        <div class="contenido-expandido">
+          <p>Texto expandido para esta tercera tarjeta.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tarjetas estilo redondo -->
+    <div class="grid reveal">
+      <div class="card">
+        <div class="img-placeholder">IMG</div>
+        <h3>TÍTULO</h3>
+        <p class="descripcion">Texto introductorio breve debajo de la imagen.</p>
+        <button class="expand-btn" onclick="toggleCard(this)">↓</button>
+        <div class="contenido-extra">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <div class="card expandida">
+        <div class="img-placeholder">IMG</div>
+        <h3>TÍTULO</h3>
+        <p class="descripcion">Texto introductorio breve debajo de la imagen.</p>
+        <button class="expand-btn" onclick="toggleCard(this)">↑</button>
+        <div class="contenido-extra">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img-placeholder">IMG</div>
+        <h3>TÍTULO</h3>
+        <p class="descripcion">Texto introductorio breve debajo de la imagen.</p>
+        <button class="expand-btn" onclick="toggleCard(this)">↓</button>
+        <div class="contenido-extra">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sección Historia + Dificultades -->
+    <section class="historia-section reveal">
+      <div class="historia-header">
+        <div class="circle-img">IMG</div>
+        <div>
+          <div class="nombre-banner">NOMBRE</div>
+          <div class="cita">"Cita textual"</div>
+        </div>
+      </div>
+
+      <div class="historia-textos">
+        <div>
+          <h3>HISTORIA</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div>
+          <h3>DIFICULTADES</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    function toggleExpand(btn) {
+      const tarjeta = btn.closest(".tarjeta-expandible");
+      tarjeta.classList.toggle("expandida");
+      btn.textContent = tarjeta.classList.contains("expandida") ? "Ver menos" : "Ver más";
+    }
+
+    function toggleCard(btn) {
+      const card = btn.closest(".card");
+      card.classList.toggle("expandida");
+      btn.textContent = card.classList.contains("expandida") ? "↑" : "↓";
+    }
+
+    function revelarElementosScroll() {
+      const elementos = document.querySelectorAll(".reveal");
+      elementos.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const trigger = window.innerHeight * 0.85;
+        if (top < trigger) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revelarElementosScroll);
+    document.addEventListener("DOMContentLoaded", revelarElementosScroll);
+  </script>
+
+<section class="tarjetas-informativas reveal">
+  <div class="tarjeta-info">
+    <img src="assets/imagenes/fondo.jpeg" alt="Ejemplo 1">
+    <h3>MTG ARENA</h3>
+    <p>Elabora tu estrategia. MTG Arena lleva el juego de cartas a PC y móviles.</p>
+    <a href="#">Juega gratis →</a>
+  </div>
+  <div class="tarjeta-info">
+    <img src="assets/imagenes/fondo.jpeg" alt="Ejemplo 2">
+    <h3>FORMATO FÍSICO</h3>
+    <p>Juega con tus amigos en casa o en tu tienda de juegos local.</p>
+    <a href="#">Encuentra un producto →</a>
+  </div>
+  <div class="tarjeta-info">
+    <img src="assets/imagenes/fondo.jpeg" alt="Ejemplo 3">
+    <h3>MAGIC ONLINE</h3>
+    <p>Plataforma clásica de Magic. Disponible para PC.</p>
+    <a href="#">Juega ya →</a>
+  </div>
+  <div class="tarjeta-info">
+    <img src="assets/imagenes/fondo.jpeg" alt="Ejemplo 4">
+    <h3>COMPETITIVO</h3>
+    <p>¡Compite en torneos digitales y en mesa!</p>
+    <a href="#">Más información →</a>
+  </div>
+</section>
+
+<section class="tarjeta-noticia reveal">
+  <img src="assets/imagenes/fondo.jpeg" alt="Noticia">
+  <div class="contenido-noticia">
+    <span class="categoria">MTG ARENA</span>
+    <h2>Detalles de la temporada clasificatoria de MTG Arena</h2>
+    <p>Juega en eventos clasificatorios de <em>MTG Arena</em> para ganar premios y estilos de cartas.</p>
+    <p class="autor">Wizards of the Coast</p>
+  </div>
+</section>
+
+<section class="mosaico-imagenes reveal">
+  <div class="columna">
+    <img src="assets/imagenes/fondo.jpeg" alt="Imagen pequeña 1">
+    <img src="assets/imagenes/fondo.jpeg" alt="Imagen pequeña 2">
+  </div>
+  <div class="columna grande">
+    <img src="assets/imagenes/fondo.jpeg" alt="Imagen grande">
+  </div>
+</section>
+
+<script>
+  function revelarElementosScroll() {
+    const elementos = document.querySelectorAll(".reveal");
+    elementos.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      const trigger = window.innerHeight * 0.85;
+      if (top < trigger) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revelarElementosScroll);
+  document.addEventListener("DOMContentLoaded", revelarElementosScroll);
+</script>
+
+
+</body>
+</html>
+

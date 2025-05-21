@@ -1,0 +1,179 @@
+.hero-header {
+  position: relative;
+  text-align: center;
+}
+
+.hero-header img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5em;
+  color: rgb(9, 129, 9);
+  -webkit-text-stroke: 2px white;
+  text-transform: uppercase;
+}
+
+.texto-largo,
+.titulo-texto,
+.solo-texto,
+.bibliografia,
+.seccion-negra {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.seccion-gradiente {
+  width: 100%;
+  min-height: 500px;
+  background: linear-gradient(to bottom, #0a3b7c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0; /* espacio arriba y abajo */
+}
+
+.seccion-gradiente img {
+  width: 20%; /* prueba con 50% o ajusta según lo que necesites */
+  max-width: 600px;
+  height: auto;
+  display: block;
+}
+
+.imagen-grande img,
+.imagen-unica img {
+  width: 40%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.imagen-texto,
+.imagen-lado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.imagen-texto img,
+.imagen-lado img {
+  max-width: 900px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.imagen-lado.reverse {
+  flex-direction: row-reverse;
+}
+
+.texto-lado,
+.imagen-texto .contenido {
+  flex: 1;
+}
+
+.tarjetas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-expandible {
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  padding: 15px;
+}
+
+.imagen-placeholder {
+  background-color: #1a5b77;
+  color: white;
+  padding: 60px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Sección negra */
+.seccion-negra {
+  background-color: black;
+  color: white;
+}
+
+.opiniones-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.opinion-box, .valor-box {
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  flex: 1;
+  background-color: #111;
+}
+
+.valor-circulo {
+  margin: 15px auto;
+}
+
+.valor-box svg {
+  width: 120px;
+  height: 120px;
+}
+
+.fondo {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+}
+
+.progreso {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1s, stroke 0.5s;
+}
+
+.valor-texto {
+  fill: white;
+  font-size: 1.5em;
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-opinion {
+  width: 80px;      /* Puedes aumentar o reducir este valor */
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}

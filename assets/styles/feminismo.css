@@ -1,0 +1,55 @@
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 500px;
+  }
+  
+  .feminismo-contenido {
+    background-color: #fdf2f8;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .feminismo-contenido h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .feminismo-contenido p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6em;
+  }
+  
+  .feminismo-imagen {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .feminismo-imagen img {
+    max-width: 90%;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .caption {
+    font-size: 0.95em;
+    margin-top: 10px;
+    color: #555;
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyecto Página</title>
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+  <link rel="stylesheet" href="assets/styles/opinion-valor.css" />
+</head>
+<body>
+  <!-- HEADER CON TRANSPARENCIA -->
+  <header id="main-header" class="transparent">
+    <div class="nav-container">
+      <div class="menu-icon" id="menu-toggle">&#9776;</div>
+      <div class="logo">Proyecto Página</div>
+      <div class="search-icon">&#128269;</div>
+    </div>
+  </header>
+
+  <!-- MENÚ LATERAL -->
+  <aside class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <ul class="menu-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="feminismo.html">Feminismo</a></li>
+    </ul>
+  </aside>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <section class="hero">
+    <img src="assets/imagenes/fondo.jpeg" alt="Imagen principal" />
+  </section>
+
+  <!-- SECCIÓN DEL CÍRCULO -->
+  <section class="circle-section reveal">
+    <img src="assets/imagenes/perfil.jpeg" alt="Imagen de perfil" class="avatar" />
+    <div class="text-content">
+      <h2>Emilio Guzmán García</h2>
+      <p>Yo como estudiante de Licenciatura de Ingenieria Biomédica, los probelmas actuales nos son de importancia y en esta página mi objetivo es 
+        documentar, investigar y formar una opinion de estos temas y problemas que en la actualidad son mas que importantes.</p>
+    </div>
+  </section>
+
+  <!-- SECCIÓN GRIS -->
+  <section class="gray-box">
+    <p>
+      Esta es una sección en un recuadro gris. Aquí va el contenido que desees
+      colocar con texto más largo o importante.
+    </p>
+  </section>
+
+  <!-- BIBLIOGRAFÍA -->
+  <footer class="bibliografia">
+    <h2>Fuentes Bibliográficas</h2>
+    <div class="columns">
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      </ul>
+      <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- COMPONENTE OPINIÓN + VALOR PERSONAL -->
+  <section class="opiniones-section">
+    <div class="opinion-box reveal">
+      <div class="contenido">
+        <img src="assets/imagenes/persona.png" alt="Persona" />
+        <div>
+          <h2>Opinión Personal</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec velit vel nunc porta laoreet.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="valor-box reveal">
+      <h2>Valor Personal</h2>
+      <div class="valor-circulo">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" class="fondo" />
+          <circle cx="50" cy="50" r="45" class="progreso" id="valor-progreso" />
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="valor-texto" id="valor-texto">0</text>
+        </svg>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/script.js"></script>
+  <script>
+    function setValorPersonalAnimado() {
+      const valorFinal = 10;
+      const progreso = document.getElementById("valor-progreso");
+      const texto = document.getElementById("valor-texto");
+
+      if (!progreso || !texto) return;
+
+      let valorActual = 0;
+      const intervalo = setInterval(() => {
+        if (valorActual > valorFinal) {
+          clearInterval(intervalo);
+          return;
+        }
+
+        const porcentaje = valorActual / 10;
+        const offset = 283 * (1 - porcentaje);
+        progreso.style.strokeDashoffset = offset;
+
+        if (valorActual <= 5) {
+          progreso.style.stroke = "red";
+        } else if (valorActual <= 7) {
+          progreso.style.stroke = "orange";
+        } else {
+          progreso.style.stroke = "green";
+        }
+
+        texto.textContent = valorActual;
+        valorActual++;
+      }, 150);
+    }
+
+    function revelarElementosScroll() {
+      const elementos = document.querySelectorAll(".reveal");
+      elementos.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        const trigger = window.innerHeight * 0.85;
+        if (top < trigger) {
+          el.classList.add("active");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revelarElementosScroll);
+    document.addEventListener("DOMContentLoaded", () => {
+      revelarElementosScroll();
+      setValorPersonalAnimado();
+    });
+  </script>
+</body>
+</html>

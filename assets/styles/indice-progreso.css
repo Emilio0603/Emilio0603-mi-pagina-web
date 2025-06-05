@@ -31,7 +31,7 @@
 
 .imagen-grande img,
 .imagen-unica img {
-  width: 100%;
+  width: 30%;
   max-height: 500px;
   object-fit: cover;
   display: block;
@@ -49,8 +49,8 @@
 
 .imagen-texto img,
 .imagen-lado img {
-  max-width: 400px;
-  width: 100%;
+  max-width: 900px;
+  width: 900%;
   border-radius: 8px;
 }
 
@@ -89,12 +89,40 @@
   margin-bottom: 10px;
 }
 
-/* Sección negra */
+.imagen-tarjeta {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: block;
+}
+
 .seccion-negra {
   background-color: black;
   color: white;
+  padding: 50px 20px;
 }
 
+/* Este bloque imita perfectamente el centrado del texto */
+.bloque-conclusion {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+}
+
+.bloque-conclusion h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.bloque-conclusion p {
+  font-size: 1.1em;
+  color: #ccc;
+}
+
+/* Tus tarjetas debajo siguen intactas */
 .opiniones-section {
   display: flex;
   gap: 40px;
@@ -141,6 +169,85 @@
 .valor-texto {
   fill: white;
   font-size: 1.5em;
+}
+
+/* Fondo negro solo para la sección */
+.contenedor-tarjetas-final {
+  background-color: black;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 2200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Tarjetas con fondo blanco */
+.tarjeta-estilo-2 {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 20px;
+  font-family: sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-estilo-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta-2-imagen img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Información de la tarjeta */
+.tarjeta-2-info small {
+  font-size: 0.75em;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tarjeta-2-info h3 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.tarjeta-2-info p {
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Posición de las tarjetas */
+.tarjeta-izquierda {
+  align-self: flex-start;
+}
+
+.tarjeta-derecha {
+  align-self: flex-end;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contenedor-tarjetas-final {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-izquierda,
+  .tarjeta-derecha {
+    align-self: center;
+  }
 }
 
 /* Reveal */

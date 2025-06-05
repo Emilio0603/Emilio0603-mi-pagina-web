@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clase en las alturas</title>
+  <link rel="stylesheet" href="assets/styles/clase_alturas.css" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+</head>
+<body>
+  <!-- HEADER CON TRANSPARENCIA -->
+  <header id="main-header" class="transparent">
+    <div class="nav-container">
+      <div class="menu-icon" id="menu-toggle">&#9776;</div>
+      <div class="logo">Clase en las alturas</div>
+      <div class="search-icon">&#128269;</div>
+    </div>
+  </header>
+
+  <!-- MENÚ LATERAL -->
+  <aside class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn">&times;</div>
+    <ul class="menu-list">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="sdg.html">SDG</a></li>
+      <li><a href="ciencia-abierta.html">Ciencia Abierta</a></li>
+      <li><a href="progreso-social.html">Indice de Progreso Social</a></li>
+      <li><a href="mujeres-ciencia.html">Mujeres en la Ciencia</a></li>
+      <li><a href="feminismo.html">Feminismo</a></li>
+      <li><a href="movilidad.html">Movilidad</a></li>
+      <li><a href="clase_alturas.html">Clase en las alturas</a></li>
+      <li><a href="agua.html">Agua</a></li>
+      <li><a href="cambio-climatico.html">Cambio climático</a></li>
+    </ul>
+  </aside>
+
+  <!-- IMAGEN PRINCIPAL -->
+  <section class="hero">
+    <img src="assets/imagenes/Clase_Alturas.jpeg" alt="Imagen principal" />
+    <h1 class="titulo-principal">CLASE EN LAS ALTURAS</h1>
+  </section>
+
+  <!-- TARJETAS DESPLEGABLES -->
+  <section class="tarjetas-informativas reveal">
+    <div class="tarjeta-info" onclick="abrirLateral('info1')">
+      <img src="assets/imagenes/edificio_sostenible.png" alt="Ejemplo 1" />
+      <h3>Crecimiento urbano desorganizado y casas en zonas altas</h3>
+      <p>Durante nuestra clase reflexionamos sobre cómo la ciudad.....</p>
+    </div>
+    <div class="tarjeta-info" onclick="abrirLateral('info2')">
+      <img src="assets/imagenes/istockphoto-611623856-612x612.jpg" alt="Ejemplo 2" />
+      <h3>Estado visual de las viviendas y la participación ciudadana</h3>
+      <p>Algo que llamó nuestra atención fue el aspecto visual....</p>
+    </div>
+    <div class="tarjeta-info" onclick="abrirLateral('info3')">
+      <img src="assets/imagenes/tlacuache-fauna-urbana-tamara-blazquez-haik.jpg" alt="Ejemplo 3" />
+      <h3>Impacto urbano en la fauna y la naturaleza</h3>
+      <p>Una de las reflexiones más profundas surgió al hablar sobre la fauna urbana....</p>
+    </div>
+    <div class="tarjeta-info" onclick="abrirLateral('info4')">
+      <img src="assets/imagenes/Parque-Sostenible-5-1024x451.jpg" alt="Ejemplo 4" />
+      <h3>Espacios recreativos sustentables y el contacto con la naturaleza</h3>
+      <p>En clase también imaginamos propuestas para hacer más sustentable....</p>
+    </div>
+  </section>
+
+
+
+  <!-- PANEL LATERAL INFORMATIVO -->
+  <!-- PANEL LATERAL INFORMATIVO -->
+<div class="panel-lateral" id="panelLateral">
+  <span class="cerrar-panel" onclick="cerrarLateral()">&times;</span>
+  <div id="contenidoLateral"></div>
+</div>
+
+
+  <!-- CONCLUSIÓN + OPINIÓN + VALOR -->
+<section class="seccion-negra reveal">
+  <h2>Conclusión</h2>
+  <p>La experiencia de observar directamente nuestro entorno urbano nos permitió comprender, de forma mucho más clara, las fortalezas y debilidades de nuestra ciudad. A través de esta clase interactiva, pudimos identificar problemáticas reales como la expansión desorganizada, la falta de planeación urbana, el deterioro de viviendas, el impacto sobre el medio ambiente y la escasez de espacios recreativos. Al mismo tiempo, surgieron ideas valiosas y posibles soluciones, como el impulso al ecoturismo, la recuperación de zonas verdes y el fomento de la participación ciudadana en la mejora del espacio público. Esta actividad no solo fortaleció nuestro aprendizaje, sino que también nos motivó a pensar en la ciudad como un espacio que puede transformarse desde la conciencia colectiva y el compromiso con el bienestar común.</p>
+
+  <div class="opiniones-section">
+    <div class="opinion-box reveal">
+      <div class="contenido">
+        <img src="assets/imagenes/guts_back1.jpg" alt="Persona" class="img-opinion" />
+        <div>
+          <h2>Opinión Personal</h2>
+          <p>Me gustó bastante esta experiencia, ya que permitió que la clase fuera mucho más dinámica e interesante. Al salir del aula y observar directamente lo que nos rodea, pude entender mejor cómo la ciudad está en constante cambio, y cómo muchos de esos cambios no siempre son planificados. Me pareció muy valioso poder reflexionar sobre temas tan importantes como el desarrollo urbano, el medio ambiente y la calidad de vida. Creo que este tipo de actividades hacen que la educación sea más significativa, porque nos conectan con nuestra realidad y nos invitan a pensar cómo podemos mejorarla.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="valor-box reveal">
+      <h2>Valor Personal</h2>
+      <div class="valor-circulo">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="45" class="fondo" />
+          <circle cx="50" cy="50" r="45" class="progreso" id="valor-progreso" />
+          <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" class="valor-texto" id="valor-texto">0</text>
+        </svg>
+      </div>
+      <p>Valoro profundamente el aprendizaje que se genera fuera del aula, cuando observamos con atención nuestro entorno. Creo que tener la voluntad de cuestionar, proponer y participar activamente en la mejora de nuestra ciudad es una muestra de responsabilidad social. Para mí, pensar en cómo podemos transformar nuestro espacio para hacerlo más sustentable, inclusivo y humano es una forma de contribuir al bienestar colectivo.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contenedor-tarjetas-final reveal">
+  <a href="movilidad.html" class="tarjeta-estilo-2 tarjeta-izquierda">
+    <div class="tarjeta-2-imagen">
+      <img src="assets/imagenes/fondo.jpeg" alt="Cerro Gordo">
+    </div>
+    <div class="tarjeta-2-info">
+      <small>Emilio Guzmán García</small>
+      <h3>Movilidad</h3>
+<p>Discutimos los retos y soluciones relacionados con el transporte urbano y la movilidad sustentable.</p>
+    </div>
+  </a>
+
+  <a href="agua.html" class="tarjeta-estilo-2 tarjeta-derecha">
+    <div class="tarjeta-2-imagen">
+      <img src="assets/imagenes/fondo.jpeg" alt="Otra actividad">
+    </div>
+    <div class="tarjeta-2-info">
+      <small>Emilio Guzmán García</small>
+      <h3>Agua</h3>
+<p>Estudiamos la importancia del agua como recurso vital y la necesidad urgente de su conservación.</p>
+    </div>
+  </a>
+</section>
+
+  <script src="assets/js/clase_alturas.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

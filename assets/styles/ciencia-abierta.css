@@ -121,7 +121,7 @@
 
 .imagen-placeholder {
   width: 100%;
-  height: 120px;
+  height: 100px;
   background-color: #226488;
   color: white;
   font-weight: bold;
@@ -215,9 +215,12 @@
 
 .opinion-box .contenido {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 15px;
+  text-align: center; /* <-- Esto centra el título y el texto */
 }
+
 
 .valor-box svg {
   width: 120px;
@@ -246,6 +249,85 @@
 .valor-texto {
   font-size: 1.5em;
   fill: white;
+}
+
+/* Fondo negro solo para la sección */
+.contenedor-tarjetas-final {
+  background-color: black;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 2200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+/* Tarjetas con fondo blanco */
+.tarjeta-estilo-2 {
+  background-color: white;
+  border: 1px solid #ccc;
+  color: #000;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 20px;
+  font-family: sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-estilo-2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro de la tarjeta */
+.tarjeta-2-imagen img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Información de la tarjeta */
+.tarjeta-2-info small {
+  font-size: 0.75em;
+  color: #555;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tarjeta-2-info h3 {
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.tarjeta-2-info p {
+  font-size: 0.9em;
+  color: #444;
+}
+
+/* Posición de las tarjetas */
+.tarjeta-izquierda {
+  align-self: flex-start;
+}
+
+.tarjeta-derecha {
+  align-self: flex-end;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contenedor-tarjetas-final {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-izquierda,
+  .tarjeta-derecha {
+    align-self: center;
+  }
 }
 
 /* Reveal animation */

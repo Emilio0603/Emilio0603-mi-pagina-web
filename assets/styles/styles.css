@@ -116,6 +116,22 @@ body {
   max-width: 600px;
 }
 
+.centered-text {
+  text-align: center;
+}
+
+
+.white-box {
+  background-color: white;
+  color: black;
+  padding: 40px 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 0 auto; /* centrado del contenedor */
+}
+
+
 /* Sección gris */
 .gray-box {
   background-color: #e0e0e0;
@@ -144,6 +160,84 @@ body {
 .columns ul {
   list-style: disc inside;
   width: 50%;
+}
+
+/* Sección negra */
+.seccion-negra {
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.conclusion-text {
+  max-width: 800px;
+  margin: 0 auto 40px auto; /* centrado + separación del contenido inferior */
+  text-align: center;
+}
+
+
+.opiniones-section {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.opinion-box, .valor-box {
+  border: 3px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  flex: 1;
+  background-color: #111;
+}
+
+.valor-circulo {
+  margin: 15px auto;
+}
+
+.valor-box svg {
+  width: 120px;
+  height: 120px;
+}
+
+.fondo {
+  fill: none;
+  stroke: #333;
+  stroke-width: 10;
+}
+
+.progreso {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 283;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  transition: stroke-dashoffset 1s, stroke 0.5s;
+}
+
+.valor-texto {
+  fill: white;
+  font-size: 1.5em;
+}
+
+.img-opinion {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.opinion-box .contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Animaciones y utilidades */

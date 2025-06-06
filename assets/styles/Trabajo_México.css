@@ -27,7 +27,7 @@
   align-items: center;
   gap: 30px;
   padding: 50px 20px;
-  background-color: #edf8e9;
+  background-color: #aedaf8;
 }
 
 .clima-img-text img {
@@ -55,7 +55,7 @@
 
 /* Sección texto centrado */
 .clima-texto-centrado {
-  background-color: #e0f7fa;
+  background-color: #c2f0f7;
   text-align: center;
   padding: 40px 20px;
   font-style: italic;
@@ -63,6 +63,34 @@
   color: #00695c;
 }
 
+.imagen-trabajo {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.imagen-trabajo img {
+  max-width: 90%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.caption {
+  font-size: 0.95em;
+  margin-top: 10px;
+  color: #555;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
 /* Termómetro */
 .termometro-section {
@@ -299,7 +327,7 @@
 
 /* Sección centrada con título y texto */
 .clima-centrado-texto {
-  background-color: #e8f5e9;
+  background-color: #bfe8ffc2;
   text-align: center;
   padding: 50px 20px;
 }

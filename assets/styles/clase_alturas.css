@@ -292,6 +292,23 @@ body {
   line-height: 1.6;
 }
 
+.titulo-info1 {
+  color: #44be13; /* verde medio */
+}
+
+.titulo-info2 {
+
+  color: #C2185B; /* rosa mexicano */
+}
+
+.titulo-info3 {
+  color: #F57C00; /* naranja */
+}
+
+.titulo-info4 {
+  color: #006400; /* naranja */
+}
+
 
 /* Reveal */
 .reveal {
